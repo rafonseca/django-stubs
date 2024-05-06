@@ -31,7 +31,7 @@ _ST = TypeVar("_ST")
 # __get__ return type
 _GT = TypeVar("_GT")
 
-class RelatedField(FieldCacheMixin, Field[_ST, _GT]):
+class RelatedField(FieldCacheMixin, Field[_ST, _GT=_ST]):
     one_to_many: bool
     one_to_one: bool
     many_to_many: bool
